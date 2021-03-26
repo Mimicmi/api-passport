@@ -59,4 +59,8 @@ class MainController extends Controller
             'message' => 'You have been logged out'
         ]);
     }
+
+    public function detail(Request $request){
+        return response()->json($request->user());
+    }
 }
